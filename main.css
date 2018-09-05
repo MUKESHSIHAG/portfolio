@@ -1,8 +1,15 @@
 body {
 	font-family: sans-serif;
-	font-size: 16px;
-	background-color: #386860;
 	font-weight: 300;
+	background: linear-gradient(620deg,#63565F,#CAAD6F,#7C776E,#000);
+	background-size: 400% 400%;
+	animation: BackgroundGradient 8s ease infinite;
+}
+@keyframes BackgroundGradient {
+    0% {background-position: 0% 25%;}
+	25%{background-position: 25% 50%;}
+	50% {background-position: 100% 50%;}   
+    100% {background-position: 0% 50%;}
 }
 
 header {
@@ -31,7 +38,7 @@ header p {
 
 .jumbotron {
 	align-items: center;
-	background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/jumbotron.jpg');
+	background-image: url('my.jpg');
 	background-position: center center;
 	background-size: cover;
 	color: ;
@@ -39,18 +46,25 @@ header p {
 	height: 500px;
 }
 
-.jumbotron h2 {
+.jumbotron h2,h3 {
 	font-size: 100px;
 	font-weight: 700;
 	margin: 0;
-  color: #fff;
+	color: rgba(128,0,0,1);
+    background-image: url('text.jpg');
+    background-repeat:repeat-x;
+	-webkit-background-clip:text;
+	color: transparent;
+	animation: animate 50s Linear infinite;
 }
-
-.jumbotron h3 {
-	margin: 0 0 20px;
-  color: #fff;
+@keyframes animate {
+  0%{
+    background-position: Left 0px top 10px;
+  }
+    40%{
+    background-position: Left 800px top 10px;
+  }
 }
-
 section .row img {
 	margin: 0 0 30px;
 	width: 100%;
@@ -111,7 +125,7 @@ footer img {
 
 .middle:hover {
   transition: .5s ease;
-  opacity: 0.9;
+  opacity: 1;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -119,14 +133,11 @@ footer img {
   -ms-transform: translate(-50%, -50%);
   text-align: center;
   border-radius: 20px;
-  border-color: #f8f8f8;
-  border-style: solid;
-  border-width: 10px;
-  background-image: linear-gradient(#63CFC0,#8DC1B9,#B6CECB,#C6D8D5);
+  background-image: linear-gradient(to bottom right,#D55B7A,#F786A3);
 }
 
 .text {
-  color: red;
-  font-size: 36px;
-  text-shadow: 2px 2px #386860;
+  color: #000000;
+  font-size: 26px;
+  text-shadow: 2px 2px #A4E9DF;
 }
